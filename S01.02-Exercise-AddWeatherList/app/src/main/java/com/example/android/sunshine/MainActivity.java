@@ -23,19 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
     // DONE (1) Create a field to store the weather display TextView
 
-    TextView WeatherField;
+    TextView mWeatherField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
 
-        WeatherField = (TextView)findViewById(R.id.tv_weather_data);
+        mWeatherField = (TextView)findViewById(R.id.tv_weather_data);
 
-        String[] WeatherDataSet = {"Sunny","Cloudy","Superdooper hot", "So hot it'll burn your face","Kinda cold"};
+        String[] WeatherDataSet = {"Raining","Sunny","Cloudy","Superdooper hot","So hot it'll burn your face","Kinda cold","Really awful","Just too much"};
 
         for(String WeatherData: WeatherDataSet){
-            WeatherField.append(WeatherData + "\n\n\n");
+            mWeatherField.append(WeatherData + "\n\n\n");
         }
 
         // DONE (2) Use findViewById to get a reference to the weather display TextView
